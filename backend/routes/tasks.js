@@ -1,7 +1,7 @@
 // routes/tasks.js
 const express = require("express");
 const router = express.Router();
-const Task = require("../models/Task");
+const Task = require("./../models/Task");
 
 // Get all tasks in descending order of creation date
 router.get("/", async (req, res) => {
