@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/tasks");
+        const response = await fetch("https://mcs-task-api.onrender.com/api/tasks");
         const data = await response.json();
         setTasks(data);
       } catch (error) {
@@ -36,7 +36,7 @@ function App() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/tasks", {
+      const response = await fetch("https://mcs-task-api.onrender.com/api/tasks", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -58,7 +58,7 @@ function App() {
   const handleUpdate = async (taskId, updatedStatus) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/tasks/${taskId}`,
+        `https://mcs-task-api.onrender.com/api/tasks/${taskId}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -82,7 +82,7 @@ function App() {
   const handleDelete = async (taskId) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/tasks/${taskId}`,
+        `https://mcs-task-api.onrender.com/api/tasks/${taskId}`,
         {
           method: "DELETE",
         }
