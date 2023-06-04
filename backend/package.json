@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "mocha"
+    "dev": "nodemon index.js",
+    "test": "mocha",
+    "build": "npm i"
   },
   "keywords": [],
   "author": "",
